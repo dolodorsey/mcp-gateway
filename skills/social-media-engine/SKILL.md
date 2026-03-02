@@ -1,179 +1,254 @@
 ---
 name: social-media-engine
 description: >
-  Social media content, scheduling, engagement, and growth engine for all Kollective brands.
-  Use this skill whenever the user wants to: create social media posts, write captions, plan
-  content calendars, manage DMs, handle comments, build engagement strategies, manage
-  influencer outreach, create stories/reels scripts, optimize hashtags, schedule posts, or
-  manage social presence across IG/FB/TikTok for any Kollective brand. Triggers include:
-  'social media', 'caption', 'post', 'Instagram', 'IG', 'Facebook', 'TikTok', 'stories',
-  'reels', 'hashtags', 'engagement', 'DMs', 'comments', 'influencer', 'content calendar',
-  'social strategy', 'social schedule'. Maps to n8n workflows: SOCIAL INBOX, SOCIAL SEND
-  DMS, SOCIAL MESSAGE GENERATOR, SOCIAL REPLY TRIAGE, SOCIAL DAILY TARGET PULL,
-  IG COMMENT ENGINE, CONTENT FACTORY. Maps to agents: SOCIAL-01 through SOCIAL-10.
+  Social media growth, engagement, content scheduling, and audience development engine for
+  all Kollective brands. Use this skill whenever the user wants to: create social media posts,
+  write captions, plan content calendars, manage DMs, handle comments, build engagement
+  strategies, manage influencer outreach, create stories/reels scripts, optimize hashtags,
+  schedule posts, grow followers, build engagement systems, design DM funnels, create
+  comment strategies, or manage social presence across IG/FB/TikTok/X/LinkedIn. Triggers
+  include: 'social media', 'caption', 'post', 'Instagram', 'IG', 'Facebook', 'TikTok',
+  'stories', 'reels', 'hashtags', 'engagement', 'DMs', 'comments', 'influencer', 'content
+  calendar', 'social strategy', 'social schedule', 'growth', 'followers', 'algorithm'.
+  Maps to n8n workflows: SOCIAL INBOX, SOCIAL SEND DMS, SOCIAL MESSAGE GENERATOR,
+  SOCIAL REPLY TRIAGE, SOCIAL DAILY TARGET PULL, IG COMMENT ENGINE, CONTENT FACTORY.
+  Maps to agents: SOCIAL-01 through SOCIAL-10.
 ---
 
 # Social Media Engine
 
-Multi-brand social media operations for the entire Kollective portfolio.
+Multi-brand social growth and engagement operations for the entire Kollective portfolio. Social media is not content for content's sake — it is a distribution system for attention, trust, and conversion.
+
+## Core Principle
+
+Every social action must connect to a business objective. Followers without engagement are vanity. Engagement without conversion is entertainment. The Social Media Engine turns platform behavior into measurable business outcomes: ticket sales, orders, partnerships, brand awareness, and community building.
 
 ## Platform Strategy
 
 ### Instagram (Primary)
-- Feed posts: High-quality visuals, brand-voice captions, strategic hashtags
-- Stories: Daily presence, behind-the-scenes, polls, countdowns, reposts
-- Reels: Short-form video, trending audio, brand personality moments
-- DMs: Outreach, customer service, relationship building
-- Comments: Engagement farming, community building, brand warmth
-
-### Facebook (Secondary)
-- Events: Official event pages with RSVP integration
-- Community: Group management for brand communities
-- Cross-post: Adapted IG content (not identical copy)
+| Feature | Purpose | Frequency | KPI |
+|---|---|---|---|
+| Feed posts | Brand authority, curated content | 4-7x/week per brand | Engagement rate, saves |
+| Stories | Daily presence, urgency, engagement | Daily (5-10 slides) | Views, replies, link clicks |
+| Reels | Discovery, algorithm reach, trend riding | 3-5x/week | Views, shares, follows |
+| DMs | Outreach, relationships, customer service | Ongoing | Response rate, conversions |
+| Comments | Community, engagement farming | Ongoing | Replies, sentiment |
+| Lives | Real-time engagement, event coverage | Monthly or event-driven | Viewers, duration |
+| Broadcast channels | Insider updates, direct reach | Weekly | Members, read rate |
 
 ### TikTok (Growth)
-- Short-form video: Trend-jacking with brand personality
-- Behind-the-scenes: Kitchen ops (Casper), event prep (HugLife), product (Bodegea)
-- Creator collaborations: Micro-influencer content
+| Feature | Purpose | Frequency | KPI |
+|---|---|---|---|
+| Short-form video | Discovery, viral potential, brand personality | 5-7x/week | Views, shares |
+| Comments | Community building, algorithm signal | Ongoing | Engagement rate |
+| Duets/Stitches | Trend participation, reach expansion | 1-2x/week | Views |
+| Lives | Real-time engagement | Event-driven | Viewers |
 
-## Content Pillars Per Division
+### Facebook (Community + Events)
+| Feature | Purpose | Frequency | KPI |
+|---|---|---|---|
+| Events | Official event pages, RSVP tracking | Per event | RSVPs, shares |
+| Posts | Cross-platform presence | 3-5x/week | Engagement |
+| Groups | Community building (if applicable) | As needed | Members, activity |
+
+### X / Twitter (Commentary + Press)
+| Feature | Purpose | Frequency | KPI |
+|---|---|---|---|
+| Posts | Hot takes, announcements, PR amplification | 3-5x/week | Impressions, engagement |
+| Threads | Deep-dive content, thought leadership | 1x/week | Saves, reposts |
+
+### LinkedIn (B2B + Partnerships)
+| Feature | Purpose | Frequency | KPI |
+|---|---|---|---|
+| Posts | Professional positioning, partnership visibility | 2-3x/week | Impressions, connection requests |
+| Articles | Thought leadership | Monthly | Reads, shares |
+
+## Content Pillars by Division
 
 ### Casper Group (Food Brands)
-1. **Food porn** — Close-up shots, plating, steam, texture
-2. **Behind the kitchen** — Prep, cooking process, team moments
-3. **Customer moments** — Reviews, reactions, unboxing deliveries
-4. **Menu drops** — New items, seasonal specials, limited runs
-5. **Brand personality** — Each sub-brand's unique voice and humor
+| Pillar | % of Content | Objective |
+|---|---|---|
+| Menu highlights / food shots | 30% | Drive orders |
+| Behind the scenes / kitchen | 15% | Build trust |
+| Customer love / UGC | 15% | Social proof |
+| Brand personality / memes | 20% | Build following |
+| Promotions / specials | 10% | Drive urgency |
+| Casper Group brand story | 10% | Build awareness of the model |
 
 ### HugLife Events
-1. **Event recaps** — Photos, highlights, atmosphere shots
-2. **Countdown content** — T-minus posts building anticipation
-3. **Behind the scenes** — Setup, planning, sneak peeks
-4. **Attendee spotlight** — Best dressed, VIP moments, crowd energy
-5. **Partner integration** — Sponsor content woven naturally
+| Pillar | % of Content | Objective |
+|---|---|---|
+| Event promotion | 30% | Drive ticket sales |
+| Past event content | 25% | FOMO / social proof |
+| Culture / lifestyle | 20% | Build brand identity |
+| Behind the scenes | 15% | Insider access |
+| Partner / sponsor features | 10% | Partner value delivery |
 
 ### Scented Flowers (Museums)
-1. **Exhibition previews** — Teaser content, artifact highlights
-2. **Cultural education** — Stories behind the exhibits
-3. **Visitor experience** — Walk-throughs, reactions, testimonials
-4. **Partner/sponsor content** — Brand integration moments
-5. **City-specific** — Local tie-ins per installation city
+| Pillar | % of Content | Objective |
+|---|---|---|
+| Exhibition previews | 30% | Drive ticket sales |
+| Cultural commentary | 25% | Authority building |
+| Visitor experience | 20% | Social proof |
+| Behind the build | 15% | Premium perception |
+| Sponsor integration | 10% | Partner value |
 
 ### Bodegea Products
-1. **Product beauty** — Clean shots, lifestyle integration
-2. **Sampling moments** — Events, retail, influencer unboxing
-3. **Brand story** — Origin, values, differentiation
-4. **User content** — Customer photos, reviews, lifestyle
-5. **Distribution wins** — New locations, retail presence
+| Pillar | % of Content | Objective |
+|---|---|---|
+| Product showcase | 35% | Drive sales |
+| Lifestyle integration | 25% | Aspiration |
+| Founder / brand story | 15% | Connection |
+| UGC / social proof | 15% | Trust |
+| Availability / distribution | 10% | Access |
 
-## Caption Framework
+## Hook System
 
-### Structure (All Brands)
-```
-[HOOK — first 7 words must stop the scroll]
-[BODY — 1-3 sentences, brand voice, value or emotion]
-[CTA — action, question, or engagement prompt]
-.
-.
-.
-[HASHTAGS — 15-20, mix of branded + discovery + niche]
-```
+### Opening Structures (first line of caption or first 1-2 seconds of video)
+| Hook Type | Example | Best For |
+|---|---|---|
+| Question | "Would you skip brunch for this?" | Food, events |
+| Statement | "This is what $50K of event production looks like." | Behind the scenes |
+| Contradiction | "We didn't plan for this to happen." | Storytelling |
+| List promise | "3 reasons Black Ball sold out in 48 hours." | Authority, FOMO |
+| Direct address | "Atlanta — we need to talk about Saturday." | City-specific events |
+| Hot take | "Most events are forgettable. Here's why ours aren't." | Thought leadership |
+| FOMO trigger | "1,200 people already confirmed. Are you?" | Event promotion |
+| Behind the curtain | "Here's what you don't see before doors open." | BTS content |
 
-### Hook Formulas
-- Statement: "This is what [X] looks like."
-- Question: "When's the last time you [X]?"
-- Command: "Stop scrolling. [Brand moment]."
-- Contrast: "[Common thing] but make it [brand twist]."
-- Social proof: "[Number] people already [action]."
+## Engagement Engine
 
-## Hashtag Strategy
-
-### Branded (always include)
-- #KollectiveHospitality
-- #[BrandName] (e.g., #HugLifeEvents, #ForeverFutbol, #CasperGroup)
-- #[EventName] (e.g., #GangstaGospel, #BlackBall, #TasteOfArt)
-
-### Discovery (rotate by content type)
-- Food: #FoodPorn #ATLEats #DeliveryFood #GhostKitchen #Foodie
-- Events: #ATLEvents #NightLife #CultureATL #EventLife #PartyATL
-- Museum: #ArtExhibition #CulturalExperience #MuseumLife #FutbolCulture
-- Product: #PremiumWater #EnergyDrink #BlackOwned #NewProduct
-
-### Niche (city-specific, rotate)
-- Atlanta: #ATL #Atlanta #AtlantaEvents #ATLNightlife
-- Houston: #Houston #HTX #HoustonEvents #HoustonFood
-- LA: #LosAngeles #LA #LAEvents #LAFood
-- DC: #WashingtonDC #DC #DCEvents #DCNightlife
-- Charlotte: #Charlotte #CLT #CharlotteEvents
-
-## Engagement Operations
-
-### Daily Target Pull (SOCIAL DAILY TARGET PULL)
-- Pull 20-50 accounts per brand from target lists
-- Prioritize: local influencers, venue partners, media, complementary brands
-- Actions: like 3 posts, comment on 1, follow if not following
-
-### Comment Generation (IG COMMENT ENGINE)
-- Every 2 hours: scan target accounts for new posts
-- Generate brand-voice comments (not generic — specific to the post content)
-- Never: "🔥🔥🔥", "Amazing!", "Love this!" alone
-- Always: Reference something specific in the post + brand personality
+### Comment Strategy (IG COMMENT ENGINE)
+| Trigger | Response Type | Purpose |
+|---|---|---|
+| New follower | Welcome comment on their recent post | Build relationship |
+| Target accounts (prospects, influencers) | Thoughtful comment on their content | Get on their radar |
+| Own post comments | Reply within 2 hours | Algorithm signal + community |
+| Competitor's audience | Engage with their commenters | Audience poaching |
+| Event-related posts | Engage with event hashtag users | Community building |
 
 ### DM Outreach (SOCIAL SEND DMS)
-- Hourly schedule with throttling
-- Personalized per target using brand playbook templates
-- Track: sent, opened, replied, converted
-- Escalation: 3 DMs max per target before pause
+| Type | Template | Frequency |
+|---|---|---|
+| Sponsor outreach | Brand-specific from outreach-playbook | Per outreach plan |
+| Influencer outreach | Invite + collaboration offer | Per influencer plan |
+| Customer engagement | Thank-you / follow-up | Post-event / post-order |
+| Event invitation | Personalized invite | Pre-event |
 
 ### Reply Triage (SOCIAL REPLY TRIAGE)
-- Inbound DMs and comments categorized:
-  - **Hot lead** — booking inquiry, partnership interest, media request → Route to decision maker
-  - **Customer service** — complaint, question, issue → Generate draft reply for approval
-  - **Engagement** — compliment, tag, share → Like + brief reply
-  - **Spam** — ignore/block
+| Inbound Type | Route To | Response Time |
+|---|---|---|
+| Question about event | Event info auto-response → human if complex | Under 1 hour |
+| Partnership inquiry | Flag → route to outreach pipeline | Under 2 hours |
+| Customer complaint | Flag → route to operations | Under 30 minutes |
+| Spam / irrelevant | Ignore or block | N/A |
+| Press inquiry | Flag → route to PR | Under 1 hour |
+| Positive comment | Heart + reply | Under 2 hours |
 
-## Influencer Operations (SOCIAL-08)
+## Influencer Operations
 
 ### Tier System
-| Tier | Followers | Engagement | Use Case |
-|---|---|---|---|
-| Nano | 1K-10K | 5%+ | Local events, authentic content |
-| Micro | 10K-50K | 3%+ | City-specific campaigns, brand ambassadors |
-| Mid | 50K-200K | 2%+ | Multi-city coverage, content partnerships |
-| Macro | 200K+ | 1%+ | Major launches, headline moments |
+| Tier | Followers | Engagement | Approach | Value |
+|---|---|---|---|---|
+| Nano | 1K-10K | 5-10% | Gifting, event invite | Authentic content |
+| Micro | 10K-50K | 3-7% | Product + small fee | Targeted reach |
+| Mid | 50K-200K | 2-5% | Paid partnership | Significant reach |
+| Macro | 200K-1M | 1-3% | Paid + activation | Mass awareness |
+| Mega | 1M+ | <2% | Strategic partnership | Cultural moment |
 
-### Outreach Template (Influencer)
+### Influencer Outreach Template
 ```
-Hey [Name] — [Brand] here. Love your content, especially [specific post/theme].
+Hey [Name] — [Brand] here. Love your content, especially [specific post/video].
 
-We're [doing X] in [City] on [Date] and think you'd be a great fit.
+We're [brief description of what's coming — event, product, activation].
 
-[Offer: invite + VIP access / paid collab / product gifting / content exchange]
+Would love to have you involved — [specific offer: invite + VIP access / paid collab / product gifting].
 
 Quick 10-min call to walk through details?
 ```
 
-## Content Calendar Structure
+## Hashtag Strategy
 
-| Day | Content Type | Platforms |
-|---|---|---|
-| Monday | Motivational / Brand story | IG + FB |
-| Tuesday | Product / Menu / Feature | IG + TikTok |
-| Wednesday | Behind the scenes | Stories + TikTok |
-| Thursday | User/customer content | IG + FB |
-| Friday | Weekend preview / Event push | All platforms |
-| Saturday | Event day / Live content | Stories + TikTok |
-| Sunday | Recap / Community engagement | IG + FB |
+### Branded (always include)
+| Brand | Hashtag(s) |
+|---|---|
+| HugLife | #HugLife #HugLifeEvents |
+| Paparazzi | #PaparazziEvent #PaparazziNightlife |
+| Gangsta Gospel | #GangstaGospel |
+| Casper Group | #CasperGroup |
+| Forever Futbol | #ForeverFutbol #FutbolLivesHere |
 
-## n8n Workflow Map
+### Discovery (rotate by content type, 10-15 per post)
+### Niche / city-specific (3-5 per post)
 
-| Action | Workflow | Schedule |
-|---|---|---|
-| Pull daily targets | SOCIAL DAILY TARGET PULL | Every 6 hours |
-| Generate comments | IG COMMENT ENGINE | Every 2 hours |
-| Send DMs | SOCIAL SEND DMS | Every hour |
-| Generate messages | SOCIAL MESSAGE GENERATOR | On-demand webhook |
-| Triage replies | SOCIAL REPLY TRIAGE | Webhook on reply |
-| Inbox monitoring | SOCIAL INBOX | Every 5 minutes |
-| Content creation | CONTENT FACTORY | Webhook on brief |
-| Outreach command | OUTREACH COMMAND CENTER | Every 4 hours |
+## Output Modes
+
+### MODE 1: Growth Strategy
+Full social growth plan for a brand:
+1. Platform role for each channel
+2. Content pillars with allocation
+3. Posting cadence
+4. Hook system
+5. Engagement engine
+6. Conversion path
+7. KPI framework
+8. Scale plan
+
+### MODE 2: Content Calendar
+Weekly/monthly content plan:
+1. Day-by-day content map
+2. Caption drafts
+3. Visual briefs
+4. Hashtag sets
+5. Post times
+6. Platform assignments
+
+### MODE 3: Engagement Strategy
+Proactive engagement plan:
+1. Comment targets and volume
+2. DM outreach plan
+3. Reply triage rules
+4. Community building tactics
+5. Algorithm optimization moves
+
+### MODE 4: Influencer Campaign
+Influencer partnership plan:
+1. Tier targeting
+2. Prospect list
+3. Outreach templates
+4. Deliverable expectations
+5. Compensation structure
+6. Performance tracking
+
+### MODE 5: Platform Audit
+Social presence review:
+1. Profile optimization
+2. Content performance analysis
+3. Engagement rate assessment
+4. Growth trend analysis
+5. Competitor comparison
+6. Improvement recommendations
+
+### MODE 6: Paid + Organic Integration
+Social advertising strategy:
+1. Organic best-performers for boosting
+2. Ad creative direction
+3. Audience targeting
+4. Budget allocation
+5. A/B testing plan
+6. Attribution tracking
+
+## Automation Hooks
+
+| Hook | System | Trigger | Action |
+|---|---|---|---|
+| Daily target pull | n8n SOCIAL DAILY TARGET PULL | Every 6 hours | Pull engagement targets |
+| Comment generation | n8n IG COMMENT ENGINE | Every 2 hours | Generate + post brand-voice comments |
+| DM sending | n8n SOCIAL SEND DMS | Hourly | Send queued DMs |
+| Message generation | n8n SOCIAL MESSAGE GENERATOR | Webhook | Generate brand-voice DM/comment |
+| Reply triage | n8n SOCIAL REPLY TRIAGE | Webhook on reply | Classify + route inbound messages |
+| Inbox monitoring | n8n SOCIAL INBOX | Every 5 minutes | Monitor all brand inboxes |
+| Content creation | n8n CONTENT FACTORY | Webhook | Generate content per brief |
+| Outreach command | n8n OUTREACH COMMAND CENTER | Every 4 hours | Coordinate all outbound social |
+| Performance logging | n8n + Supabase | Daily | Log metrics per brand per platform |
+| Trend monitoring | n8n scheduled | Daily | Check trending audio/hashtags for content opportunities |
