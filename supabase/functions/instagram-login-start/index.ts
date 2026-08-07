@@ -5,6 +5,7 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL") || "";
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
 const IG_APP_ID = Deno.env.get("INSTAGRAM_APP_ID") || "";
 const CALLBACK = Deno.env.get("INSTAGRAM_OAUTH_REDIRECT_URI") || `${SUPABASE_URL}/functions/v1/instagram-login-callback`;
+const DEFAULT_RETURN = "https://www.doctordorsey.com/ops-os/connections";
 const SCOPES = [
   "instagram_business_basic",
   "instagram_business_content_publish",
@@ -18,7 +19,7 @@ const json = (b: unknown, s = 200) => new Response(JSON.stringify(b, null, 2), {
 function b64u(bytes: Uint8Array) { let s = ""; for (const b of bytes) s += String.fromCharCode(b); return btoa(s).replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", ""); }
 function randomToken() { const b = new Uint8Array(32); crypto.getRandomValues(b); return b64u(b); }
 async function sha(v: string) { const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(v)); return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join(""); }
-function safeReturn(v: string | null) { try { const u = new URL(v || "https://www.thedoctordorsey.com/ops-os/connections"); return u.protocol === "https:" ? u.toString() : "https://www.thedoctordorsey.com/ops-os/connections"; } catch { return "https://www.thedoctordorsey.com/ops-os/connections"; } }
+function safeReturn(v: string | null) { try { const u = new URL(v || DEFAULT_RETURN); return u.protocol === "https:" ? u.toString() : DEFAULT_RETURN; } catch { return DEFAULT_RETURN; } }
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   if (!IG_APP_ID) return json({ ok: false, error: "missing_instagram_app_id" }, 500);
@@ -31,6 +32,6 @@ Deno.serve(async (req) => {
   if (error) return json({ ok: false, error: error.message }, 500);
   const auth = new URL("https://www.instagram.com/oauth/authorize"); auth.searchParams.set("client_id", IG_APP_ID); auth.searchParams.set("redirect_uri", CALLBACK); auth.searchParams.set("response_type", "code"); auth.searchParams.set("scope", SCOPES.join(",")); auth.searchParams.set("state", state);
   const wantsJson = req.method === "POST" || (req.headers.get("accept") || "").includes("application/json");
-  if (wantsJson) return json({ ok: true, execution_policy: "instagram_login_direct", auth_url: auth.toString(), callback: CALLBACK, scopes: SCOPES, expires_in_seconds: 900 });
+  if (wantsJson) return json({ ok: true, execution_policy: "instagram_login_direct", auth_url: auth.toString(), callback: CALLBACK, return_url: returnUrl, scopes: SCOPES, expires_in_seconds: 900 });
   return new Response(null, { status: 302, headers: { ...cors, location: auth.toString() } });
 });
