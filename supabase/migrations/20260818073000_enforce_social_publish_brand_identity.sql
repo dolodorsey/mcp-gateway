@@ -168,7 +168,7 @@ returns trigger
 language plpgsql
 security definer
 set search_path = public
-as $$;
+as $$
 begin
   if lower(coalesce(new.status, '')) like 'archived%' then
     return new;
